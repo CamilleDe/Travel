@@ -1,0 +1,66 @@
+# =========================
+# .NET / ASP.NET Core
+# =========================
+bin/
+obj/
+publish/
+*.exe
+*.dll
+*.pdb
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.vsconfig
+
+# Rider
+.idea/
+
+# =========================
+# Build & Logs
+# =========================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.log
+logs/
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# =========================
+# Secrets & Config local
+# =========================
+appsettings.*.local.json
+secrets.json
+*.pfx
+*.key
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Node (pour le frontend Vue)
+# =========================
+node_modules/
+dist/
+.npm
+.pnpm-store/

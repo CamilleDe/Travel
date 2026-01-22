@@ -8,11 +8,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
+// CORS pour le frontend Vue
+builder.Services.AddCors(options =>
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+
 // Configuration EF Core avec PostgreSQL
 builder.Services.AddDbContext<TravelDb>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("TravelDb")));
 
 var app = builder.Build();
+
+app.UseCors();
 
 // ============================================
 // ENDPOINTS
